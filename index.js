@@ -1,17 +1,18 @@
+/* eslint-disable no-console */
+
 import express from 'express';
 import path from 'path';
 import cors from 'cors';
 
-
 const app = express();
+
 app.use(express.static(path.join(__dirname, '/dist')));
-app.set('views', path.join(__dirname, '/public'));
-app.set('view engine', 'ejs');
+
+
 app.use(cors());
 
 app.get('/*', (req, res) => {
-  res.render('index');
-
+  res.sendFile(path.join(__dirname, 'dist/bundles/index.html'));
 });
 
 app.listen(process.env.PORT || 4000, () => {
