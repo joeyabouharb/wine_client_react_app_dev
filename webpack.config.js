@@ -7,7 +7,7 @@ const VENDOR_LIBS = ['react', 'react-dom'];
 
 module.exports = {
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'dist/'),
     compress: true,
     port: 9000,
   },
@@ -20,7 +20,7 @@ module.exports = {
     vendor: VENDOR_LIBS,
   },
   output: {
-    path: path.join(__dirname, 'dist/bundles'),
+    path: path.join(__dirname, 'dist/'),
     publicPath: '/',
     filename: '[name].[chunkhash].bundle.js',
     chunkFilename: '[name].[chunkhash].bundle.js',
