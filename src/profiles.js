@@ -2,27 +2,27 @@
 export const wineGroups = [
   {
     colour: 'white',
-    common: {
-      chardonnay: 'chardonnay',
-      riesling: 'riesling',
-      semillion: 'semillion',
-    },
-    uncommon: {
-      albarino: 'albarino',
-      whiteGranach: 'white grenache',
-    },
+    common: [
+      'chardonnay',
+      'riesling',
+      'semillion',
+    ],
+    uncommon: [
+      'albarino',
+      'white grenache',
+    ],
   },
   {
     colour: 'red',
-    common: {
-      pinotNoir: 'pinot noir',
-      shiraz: 'shiraz',
-      merlot: 'merlot',
-    },
-    uncommon: {
-      carmenere: 'carmenere',
-      petitVerdot: 'petit verdot',
-    },
+    common: [
+      'pinot noir',
+      'shiraz',
+      'merlot',
+    ],
+    uncommon: [
+      'carmenere',
+      'petit verdot',
+    ],
   },
 ];
 
@@ -30,48 +30,48 @@ export const varietalProfiles = [
   {
     varietal: 'chardonnay',
     appearance: {
-      clarity: {
-        clear: 'clear',
-        opaque: 'opaque',
-        cloudy: 'cloudy',
-      },
-      colour: {
-        pale: 'pale',
-        golden: 'golden',
-        straw: 'straw',
-      },
+      clarity: [
+        'clear',
+        'opaque',
+        'cloudy',
+      ],
+      colour: [
+        'pale',
+        'golden',
+        'straw',
+      ],
     },
     character: {
-      fruit: {
-        apple: 'apple',
-        apricot: 'apricot',
-        banana: 'banana',
-        stoneFruit: 'stone fruit',
-      },
-      age: {
-        fig: 'fig',
-        honey: 'honey',
-        toast: 'toast',
-      },
-      oak: {
-        almond: 'almond',
-        buttterscotch: 'butterscotch',
-        vanilla: 'vanilla',
-      },
-      body: {
-        full: 'full',
-        light: 'light',
-      },
-      acid: {
-        sharp: 'sharp',
-        tart: 'tart',
-        soft: 'soft',
-      },
-      finish: {
-        smooth: 'smooth',
-        long: 'long',
-        persistent: 'persistent',
-      },
+      fruit: [
+        'apple',
+        'apricot',
+        'banana',
+        'stone fruit',
+      ],
+      age: [
+        'fig',
+        'honey',
+        'toast',
+      ],
+      oak: [
+        'almond',
+        'butterscotch',
+        'vanilla',
+      ],
+      body: [
+        'full',
+        'light',
+      ],
+      acid: [
+        'sharp',
+        'tart',
+        'soft',
+      ],
+      finish: [
+        'smooth',
+        'long',
+        'persistent',
+      ],
     },
   },
 ];

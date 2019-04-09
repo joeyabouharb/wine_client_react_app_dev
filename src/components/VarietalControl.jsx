@@ -16,12 +16,12 @@ const VarietalControl = (
           <div key={profile.colour}>
             <div>Common values</div>
             {
-              Object.entries(profile.common).map(
-                ([key, value]) => (
+              profile.common.map(
+                value => (
                   <input
                     type="button"
                     value={value}
-                    key={key}
+                    key={value}
                     onClick={() => setVarietal(value)}
                   />
                 ),
@@ -29,12 +29,12 @@ const VarietalControl = (
             }
             <div>Uncommon </div>
             {
-              Object.entries(profile.uncommon).map(
-                ([key, value]) => (
+              profile.uncommon.map(
+                value => (
                   <input
                     type="button"
                     value={value}
-                    key={key}
+                    key={value}
                     onClick={() => setVarietal(value)}
                   />
                 ),

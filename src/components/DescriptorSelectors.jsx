@@ -20,9 +20,9 @@ const DescriptorSelectors = (
                   <span>{key}</span>
                   <select>
                     {
-                  Object.entries(value).map(
-                    ([k, v]) => (
-                      <option key={k} value={v}>{v}</option>
+                  value.map(
+                    v => (
+                      <option key={v} value={v}>{v}</option>
                     ),
                   )
                   }
@@ -39,9 +39,9 @@ const DescriptorSelectors = (
                   <span>{key}</span>
                   <select>
                     {
-                  Object.entries(value).map(
-                    ([k, v]) => (
-                      <option key={k} value={v}>{v}</option>
+                  value.map(
+                    v => (
+                      <option key={v} value={v}>{v}</option>
                     ),
                   )
                   }
