@@ -10,17 +10,21 @@ const ColourControl = (
   const colours = wineGroups;
 
   return (
-    colours.map(items => (
-      <input
-        type="button"
-        key={items.colour}
-        value={items.colour}
-        onClick={() => {
-          setColour(items.colour);
-          setVarietal('');
-        }}
-      />
-    ))
+    <div>
+      {
+      colours.map(items => (
+        <input
+          type="button"
+          key={items.colour}
+          value={items.colour}
+          onClick={() => {
+            setColour(items.colour);
+            setVarietal('');
+          }}
+        />
+      ))
+    }
+    </div>
   );
 };
 export default ColourControl;

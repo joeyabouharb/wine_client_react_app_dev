@@ -10,6 +10,8 @@ const VarietalControl = (
   const colours = wineGroups;
 
   return (
+    <div>
+      {
     colours.map((profile) => {
       if (profile.colour === colour) {
         return (
@@ -45,6 +47,8 @@ const VarietalControl = (
       }
       return null;
     })
+    }
+    </div>
   );
 };
 

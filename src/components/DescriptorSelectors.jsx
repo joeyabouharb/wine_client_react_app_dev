@@ -8,6 +8,8 @@ const DescriptorSelectors = (
 ) => {
   const profiles = varietalProfiles;
   return (
+    <div>
+      {
     profiles.map((profile) => {
       if (varietal === profile.varietal) {
         return (
@@ -55,6 +57,8 @@ const DescriptorSelectors = (
       }
       return null;
     })
+  }
+    </div>
   );
 };
 
