@@ -1,5 +1,6 @@
 import React from 'react';
-import { wineGroups } from '../profiles';
+import PropTypes from 'prop-types';
+import { wineGroups } from '../../../../profiles';
 
 const ColourControl = (
   {
@@ -27,4 +28,10 @@ const ColourControl = (
     </div>
   );
 };
+
+ColourControl.propTypes = {
+  setColour: PropTypes.func.isRequired,
+  setVarietal: PropTypes.func.isRequired,
+};
+
 export default ColourControl;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { wineGroups } from '../profiles';
+import PropTypes from 'prop-types';
+import { wineGroups } from '../../../../profiles';
 
 const VarietalControl = (
   {
@@ -50,6 +51,11 @@ const VarietalControl = (
     }
     </div>
   );
+};
+
+VarietalControl.propTypes = {
+  colour: PropTypes.string.isRequired,
+  setVarietal: PropTypes.func.isRequired,
 };
 
 export default VarietalControl;

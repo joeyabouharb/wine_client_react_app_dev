@@ -1,5 +1,6 @@
 import React from 'react';
-import { varietalProfiles } from '../profiles';
+import PropTypes from 'prop-types';
+import { varietalProfiles } from '../../../../profiles';
 
 const DescriptorSelectors = (
   {
@@ -60,6 +61,10 @@ const DescriptorSelectors = (
   }
     </div>
   );
+};
+
+DescriptorSelectors.propTypes = {
+  varietal: PropTypes.string.isRequired,
 };
 
 export default DescriptorSelectors;

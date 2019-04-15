@@ -1,22 +1,12 @@
-import React, { useState } from 'react';
-import FormViewSwitch from './components/FormViewSwitch';
+import React from 'react';
+import InjectRoutes from './routes/InjectRoutes';
+import Navigation from './components/shared/Navigation';
 
-const App = () => {
-  const [colour, setColour] = useState('');
-  const [varietal, setVarietal] = useState('');
-
-  return (
-    <>
-      <h1 className="text-center"> Hello! </h1>
-
-      <FormViewSwitch
-        colour={colour}
-        varietal={varietal}
-        setColour={setColour}
-        setVarietal={setVarietal}
-      />
-
-    </>
-  );
-};
+const App = () => (
+  <>
+    <h1 className="text-center"> Uncorked! </h1>
+    <Navigation />
+    <InjectRoutes />
+  </>
+);
 export default App;

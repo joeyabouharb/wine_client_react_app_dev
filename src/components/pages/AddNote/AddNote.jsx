@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import ColourControl from './ColourControl';
-import DescriptorSelectors from './DescriptorSelectors';
-import VarietalControl from './VarietalControl';
+import ColourControl from './views/ColourControl';
+import DescriptorSelectors from './views/DescriptorSelectors';
+import VarietalControl from './views/VarietalControl';
 
-const FormViewSwitch = ({
-  colour,
-  varietal,
-  setColour,
-  setVarietal,
-}) => {
+const FormView = () => {
   const [dom, setDom] = useState('');
+  const [colour, setColour] = useState('');
+  const [varietal, setVarietal] = useState('');
+  const [descriptors, setDescriptors] = useState(['']);
 
   useEffect(() => {
     if (colour === '') {
@@ -30,6 +28,8 @@ const FormViewSwitch = ({
       setDom(
         <DescriptorSelectors
           varietal={varietal}
+          setDescriptors={setDescriptors}
+          descriptors={descriptors}
         />,
       );
     }
@@ -40,4 +40,4 @@ const FormViewSwitch = ({
   );
 };
 
-export default FormViewSwitch;
+export default FormView;

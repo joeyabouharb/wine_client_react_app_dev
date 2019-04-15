@@ -1,9 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './scss/index.scss';
 
 render(
-  <App className="container-fluid" />,
+  <BrowserRouter>
+    <App className="container-fluid" />
+  </BrowserRouter>,
   document.getElementById('root'),
 );

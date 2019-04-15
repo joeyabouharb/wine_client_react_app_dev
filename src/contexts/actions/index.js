@@ -9,7 +9,7 @@ export const submitVarietal = payload => (
 );
 
 export const previousLayout = payload => (
-  { type: types.PREVIOUS_FORM, payload }
+  { type: types.PREVIOUS_VIEW, payload }
 );
 
 export const submitAllData = payload => (
