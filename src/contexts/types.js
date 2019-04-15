@@ -1,0 +1,7 @@
+export const PICKED_WINE_COLOR = 'PICKED_WINE_COLOR';
+
+export const PICKED_VARIETAL = 'PICKED_VARIETAL';
+
+export const PREVIOUS_VIEW = 'PREVIOUS_VIEW';
+
+export const SUBMIT_DATA = 'SUBMIT_DATA';

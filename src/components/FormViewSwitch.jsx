@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ColourControl from './ColourControl';
 import DescriptorSelectors from './DescriptorSelectors';
 import VarietalControl from './VarietalControl';
@@ -9,52 +9,34 @@ const FormViewSwitch = ({
   setColour,
   setVarietal,
 }) => {
-  let render;
-  const colourVisible = (c) => {
-    if (c === '') return true;
-    return false;
-  };
+  const [dom, setDom] = useState('');
 
-  const varietalVisible = (c, v) => {
-    if (c !== ''
-        && v === '') return true;
-    return false;
-  };
+  useEffect(() => {
+    if (colour === '') {
+      setDom(
+        <ColourControl
+          setColour={setColour}
+          setVarietal={setVarietal}
+        />,
+      );
+    } else if (varietal === '') {
+      setDom(
+        <VarietalControl
+          setVarietal={setVarietal}
+          colour={colour}
+        />,
+      );
+    } else if (varietal !== '' && colour !== '') {
+      setDom(
+        <DescriptorSelectors
+          varietal={varietal}
+        />,
+      );
+    }
+  }, [colour, varietal]);
 
-  const descriptorVisible = (c, v) => {
-    if (c !== ''
-        && v !== '') return true;
-    return false;
-  };
-  if (colourVisible(colour)) {
-    render = (
-      <ColourControl
-        setColour={setColour}
-        setVarietal={setVarietal}
-      />
-    );
-  }
-  if (varietalVisible(colour, varietal)) {
-    render = (
-      <VarietalControl
-        setVarietal={setVarietal}
-        colour={colour}
-      />
-    );
-  }
-  if (descriptorVisible(colour, varietal)) {
-    render = (
-      <DescriptorSelectors
-        varietal={varietal}
-      />
-    );
-  }
   return (
-    <div>
-      {
-        render
-      }
-    </div>
+    dom
   );
 };
 
