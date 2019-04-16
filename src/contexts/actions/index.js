@@ -4,6 +4,10 @@ export const submitColour = payload => (
   { type: types.PICKED_WINE_COLOR, payload }
 );
 
+export const initForm = () => (
+  { type: types.INITIALISE_FORM }
+);
+
 export const submitVarietal = payload => (
   { type: types.PICKED_VARIETAL, payload }
 );

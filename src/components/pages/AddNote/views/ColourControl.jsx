@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { wineGroups } from '../../../../profiles';
+import { submitColour } from '../../../../contexts/actions';
 
 const ColourControl = (
   {
-    setColour,
-    setVarietal,
+    dispatch,
   },
 ) => {
   const colours = wineGroups;
@@ -19,8 +19,7 @@ const ColourControl = (
           key={items.colour}
           value={items.colour}
           onClick={() => {
-            setColour(items.colour);
-            setVarietal('');
+            dispatch(submitColour(items.colour));
           }}
         />
       ))
@@ -30,8 +29,7 @@ const ColourControl = (
 };
 
 ColourControl.propTypes = {
-  setColour: PropTypes.func.isRequired,
-  setVarietal: PropTypes.func.isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 export default ColourControl;

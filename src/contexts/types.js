@@ -5,3 +5,5 @@ export const PICKED_VARIETAL = 'PICKED_VARIETAL';
 export const PREVIOUS_VIEW = 'PREVIOUS_VIEW';
 
 export const SUBMIT_DATA = 'SUBMIT_DATA';
+
+export const INITIALISE_FORM = 'INITIALISE_FORM';
