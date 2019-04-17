@@ -24,6 +24,7 @@ const DescriptorSelectors = (
       finish: '',
     });
   }, []);
+
   const onChangeDescriptor = (event, key) => {
     const data = Object.assign({}, descriptors, {
       [key]: event.target.value,

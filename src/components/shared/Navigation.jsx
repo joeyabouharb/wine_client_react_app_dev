@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navigation = () => (
-  <nav>
+  <nav className="row">
     <Link
       className="nav-item nav-link"
       to="/home"

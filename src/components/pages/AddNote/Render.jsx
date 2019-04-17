@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { initForm } from '../../../contexts/actions';
+import { initForm, previousLayout } from '../../../contexts/actions';
 import formContext from '../../../contexts/formContext';
 import ColourControl from './views/ColourControl';
 import DescriptorSelectors from './views/DescriptorSelectors';
@@ -25,17 +25,33 @@ const Render = () => {
         );
       case 2:
         return (
-          <VarietalControl
-            dispatch={dispatch}
-            colour={formData.colour}
-          />
+          <>
+            <VarietalControl
+              dispatch={dispatch}
+              colour={formData.colour}
+            />
+            <input
+              type="button"
+              onClick={() => dispatch(previousLayout())}
+              value="previous"
+              className="btn btn-danger m-2"
+            />
+          </>
         );
       case 3:
         return (
-          <DescriptorSelectors
-            dispatch={dispatch}
-            varietal={formData.varietal}
-          />
+          <>
+            <DescriptorSelectors
+              dispatch={dispatch}
+              varietal={formData.varietal}
+            />
+            <input
+              type="button"
+              onClick={() => dispatch(previousLayout())}
+              value="previous"
+              className="btn btn-danger m-2"
+            />
+          </>
         );
       default:
         return (
@@ -45,11 +61,9 @@ const Render = () => {
   };
 
   return (
-    <>
-      <div>
-        <FormSwitch />
-      </div>
-    </>
+    <div className="container">
+      <FormSwitch />
+    </div>
   );
 };
 
